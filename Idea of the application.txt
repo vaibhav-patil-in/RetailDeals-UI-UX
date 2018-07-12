@@ -1,0 +1,187 @@
+
+Problems -
+
+1) No new innovations in retail industry.
+
+2) Going by same startegy and incentives which indivuduals dont pay attentions.
+
+3) Online innovations are far more greater than retailer.
+
+4) No proper shop attendies.
+
+Solutions -
+
+Consider the retail industry as dead and start creating it from scratch again. Lets build it again with new innovations and systems which will help customers to satisfy needs and buying options.
+
+Lets have omnichannel presence in the world which is like online but physical stores in hands.
+
+
+The design specifications of omnichannel retailing are growing clearer by the day. Customers want everything. They want the advantages of digital, such as broad selection, rich product information, and customer reviews and tips. They want the advantages of physical stores, such as personal service, the ability to touch products, and shopping as an event and an experience. (Online merchants take note.) Different customer segments will value parts of the shopping experience differently, but all are likely to want perfect integration of the digital and the physical.
+
+
+Pathways-
+
+Retailers today have a variety of precision tools that they can apply to discrete parts of these shopping pathways. Consider the job of creating awareness, which in the past relied mostly on mass-market advertising, promotions, and the like. Today marketers can send coupon codes and offers to customers’ mobile devices. They can optimize search terms and location-based promotions. They can provide targeted offers to customers who check in to stores through external platforms like Foursquare. The list of possibilities is getting longer by the day.
+
+
+If traditional retailers hope to survive, they have to turn the one big feature that internet retailers lack—stores—from a liability into an asset. Stores will continue to exist in any foreseeable future—and they can be an effective competitive weapon. 
+
+
+The traditional store, however, won’t be sufficient. For too many people, shopping in a store is simply a chore to be endured: If they can find ways to avoid it, they will. But what if visiting a store were exciting, entertaining, emotionally engaging? What if it were as much fun as going to the movies or going out to dinner—and what if you could get the kind of experience with products that is simply unavailable online?
+
+
+In fact, it is already doing so. Digital technology can replace lifeless storefront windows with vibrant interactive screens that change with the weather or time of day and are capable of generating recommendations or taking orders when the store is closed. It can allow customers to design products or assemble outfits and display their creations in high-visibility locations like Times Square. It can create engaging games that attract customers, encourage them to stay longer, and reward them for cocreating innovative ideas.
+
+
+Digital technology—in the form of tablets, for example—can also give sales associates nearly infinite information about customers, describing the way they like to be treated and creating precise models of their homes or body types that enable perfect choices. It can change pricing and promotions accurately and instantaneously. It can provide customized recommendations. Virtual mirrors accelerate and enliven the dressing room experience by connecting customers with trusted friends. Technology can eliminate checkout lines, capture transaction receipts, file rebate claims, and speed returns. It can give a call center operator full access to a customer’s purchase and complaint history.
+
+My objective here is not to enumerate every possible innovation. Rather, it’s to illustrate how the opportunities for digital technology in stores, mobile devices, call centers, and other channels are just as abundant and viable as they are for websites. Moreover—and this is key—retailers in many categories can link these channels and technologies to create an omnichannel experience with stores that is superior to a purely digital retail strategy.
+
+
+
+
+
+
+
+
+
+
+
+Technical
+
+
+
+
+Users --
+
+1) Super Admin(Product Admin) -
+	a) Add/Update/Delete Retail Brands
+		-Add/Update/Delete Stores into retail brand
+	b) Change password for Retail Brands & Stores
+	c) Add/Update/Delete campaigns/Deals for retailers.
+	d) Dashboard
+		-All retailers
+		-Current deals
+		-Performance
+		-Consumers/Users/Customers issues and activity.
+
+2) Brand/Merchant admin- Can add multiple stores or will have only one store
+		-Store1 admin
+
+3) Consumers/Users/Customer
+		-Application users, will be registered using app. On Web, they will be asked to download app.
+
+
+
+Tables -
+
+1) Roles-
+	role_id -->PK
+	role_name --> admin/brandAdmin/storeAdmin/user
+	role_text
+
+2) Retailers
+	r_id -->PK
+	r_role_id ---> FK Roles--> role_id
+	r_email
+	r_password
+	r_contactName
+	r_contactNumber
+	r_mobileNumber
+	r_type    ---> clothes/bar/restaurant/hotel/
+	r_creationDate
+	r_lastUpdateDate
+
+3) Retail_Stores
+	rs_id -->PK
+	rs_r_id ---> FK Roles--> r_id
+	rs_brandName
+	rs_brandLogo
+	rs_tagline
+	rs_addressLine1
+	rs_addressLine2
+	rs_city
+	rs_state
+	rs_postalCode
+	rs_lat
+	rs_lng
+	rs_creationDate
+	rs_lastUpdateDate
+
+4) Retail_Deals
+	rd_id -->PK
+	rd_title
+	rd_description
+	rd_bannerImg
+	rd_expirationDate
+	rd_rules
+	rd_type -->Limited/Unlimited/First50/Other
+	rd_couponCode --> From POS System or Autogenerated, which should be entered by storeAdmin, at the time of redeem.
+	rd_creationDate
+	rd_lastUpdateDate
+
+5) Retail_Deals_Stores_Mapping
+	rdsm_id --> PK
+	rdsm_rd_id  --> FK Retail_Deals --> rd_id
+	rdsm_rs_id  --> FK Retail_Stores --> rs_id
+
+6) Retail_Deals_Insight
+	rdi_id -->PK
+	rd_id
+	rdi_views
+	rdi_redeemed
+	rdi_lastUpdateDate
+
+7) Retail_Deals_Customer_Redemptions
+	rdcr_id -->PK
+	rdcr_rd_id  --> FK Retail_Deals --> rd_id
+	rdcr_rs_id  --> FK Retail_Stores --> rs_id
+	rdcr_customerID --> FK Customers --> customerID
+	rdcr_creationDate
+	rdcr_lastUpdateDate
+
+8) Customers
+	c_customerID -->PK
+	c_customerEmail
+	c_customerPassword
+	c_customerName
+	c_customerAddressLine1
+	c_customerAddressLine2
+	c_customerCity
+	c_customerState
+	c_customerPostalCode
+	c_isFacebookVerified
+	c_creationDate
+	c_lastUpdateDate
+
+9) Customer_Preferences
+	cp_id --> PK
+	cp_c_customerID --> FK Customers --> customerID
+	cp_nearByDeals
+	cp_weeklyDeals
+	cp_AllDeals
+	cp_creationDate
+	cp_lastUpdateDate
+
+10) Customer_Favorite_Stores
+	cfs_id --> PK
+	cfs_c_customerID --> FK Customers --> customerID
+	cfs_rs_id  --> FK Retail_Stores --> rs_id
+	cfs_cp_creationDate
+	cfs_cp_lastUpdateDate
+
+11) Customer_Notifications
+	cn_id  --> PK
+	cn_c_customerID --> FK Customers --> customerID
+	cn_message
+	cn_isReadDone
+	cn_creationDate
+	cn_lastUpdateDate
+
+12) Admins
+	id
+	username
+	password
+
+
+https://www.google.com/patents/US20080004951?dq=retail+brand+advertising&hl=en&sa=X&ei=a7t-VNvFFIubNonWgugJ&ved=0CE4Q6AEwBw

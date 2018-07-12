@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage Retailers</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/deals.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+
+    <!--Side bar section starts-->
+    <aside class="left-panel" style="overflow: hidden; outline: none;">
+      
+      <!--Retailer admin profile div starts-->
+      <div class="user text-center">
+        <img src="../images/user.png" class="img-circle" alt="...">
+        <h4 class="user-name">Ram Kumar</h4>
+        
+        <div class="dropdown user-login">
+          <button class="btn btn-xs dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" aria-expanded="true">
+            <i class="fa fa-circle status-icon available"></i> Available <i class="fa fa-angle-down"></i>
+          </button>
+        
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation">
+              <a role="menuitem" href=""><i class="fa fa-circle status-icon signout"></i> Sign Out</a>
+            </li>
+          </ul>
+        </div>   
+      </div>
+      <!--Retailer admin profile div Ends-->
+
+      <!--Navigation menu starts-->
+      <nav class="navigation">
+        <ul class="list-unstyled">
+          <li>
+            <a href="dashboard.html">
+              <i class="fa fa-tachometer"></i>
+              <span class="nav-label">Dashboard</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="retailers.html">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="nav-label">Manage Retailers</span>
+            </a>
+          </li>
+          <li>
+            <a href="alldeals.html">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="nav-label">All Deal</span>
+            </a>
+          </li>
+          <li>
+            <a href="customers.html">
+              <i class="fa fa-user"></i>
+              <span class="nav-label">My Customers</span>
+            </a>
+          </li>
+          <li class="has-submenu">
+            <a href="settings.html">
+              <i class="fa fa-gears"></i>
+              <span class="nav-label">Settings</span>
+            </a>
+            <!--<ul class="list-unstyled" style="display: block;">
+              <li><a href="#">Change Password</a></li>
+              <li><a href="#">Account Settings</a></li>
+            </ul>-->
+          </li>
+        </ul>
+      </nav>
+      <!--Navigation menu ends-->
+
+    </aside>
+    <!--Side bar section ends-->
+
+    <!--Content section starts-->
+    <section class="content">
+
+      <!--Header starts-->
+      <header class="top-head container-fluid">
+
+        <button type="button" class="navbar-toggle pull-left">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <h4 class="logo pull-left">#Dala</h4>
+
+      </header>
+      <!--Header ends-->
+
+      <!--Content area starts-->
+      <div class="wraper container-fluid">
+
+        <!--<div class="page-header"><h1>Dashboard <small>Let's get a quick overview...</small></h1></div>-->
+
+        <!--All Customer widgets starts-->
+        <div class="row">
+
+          <div class="panel panel-default">
+            <!--<div class="panel-heading">Choose to search</div>-->
+            <div class="panel-body">
+              <div class="col-md-5">
+                <select class="select-dropdown" name="city">
+                  <option value="-">City</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Mumbai">Banglore</option>
+                  <option value="Mumbai">Chennai</option>
+                  <option value="Mumbai">Delhi</option>
+                </select>
+                <input type="text" class="input-zip" placeholder="zip code">
+              </div>              
+              <div class="col-md-4">
+                <input type="text" placeholder="Search retailer" class="form-control form-control-circle">
+              </div>
+              <div class="col-md-1">
+                <input class="btn btn-sm signin-button" type="submit" value="Add New Retailer">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-md-3 col-lg-3">
+            <div class="offer-small offer">
+              <div class="vendor-image" style="background-color:#f85e14">
+                <a><img src="../images/logo.jpg"></a>
+              </div>
+              <div class="vendor-offer-count trim-content">
+                <a>Valid Thru 15-Jan-2015</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-lg-3">
+            <div class="offer-small offer">
+              <div class="vendor-image" style="background-color:#282828">
+                <a><img src="../images/logo-louis-philippe.png"></a>
+              </div>
+              <div class="vendor-offer-count trim-content">
+                <a>Expired</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <!--All Customer widgets ends-->
+
+      </div>
+      <!--Content area ends-->
+
+      <!--Footer starts-->
+      <footer class="container-fluid footer">
+        Copyright © 2014 <a href="#" target="_blank">#Dala</a>
+        <a href="#" class="pull-right scrollToTop"><i class="fa fa-chevron-up"></i></a>
+      </footer>
+      <!--Footer ends-->
+
+    </section>
+    <!--Content section ends-->
+
+    
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/jquery.sparkline.min.js"></script>
+    <script src="../js/jquery.sparkline.demo.js"></script>
+
+  </body>
+</html>

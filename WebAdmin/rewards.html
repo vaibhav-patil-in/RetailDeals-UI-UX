@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer Details</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+
+    <!--Side bar section starts-->
+    <aside class="left-panel" style="overflow: hidden; outline: none;">
+      
+      <!--Retailer admin profile div starts-->
+      <div class="user text-center">
+        <img src="../images/user.png" class="img-circle" alt="...">
+        <h4 class="user-name">Ram Kumar</h4>
+        
+        <div class="dropdown user-login">
+          <button class="btn btn-xs dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" aria-expanded="true">
+            <i class="fa fa-circle status-icon available"></i> Available <i class="fa fa-angle-down"></i>
+          </button>
+        
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation">
+              <a role="menuitem" href=""><i class="fa fa-circle status-icon signout"></i> Sign Out</a>
+            </li>
+          </ul>
+        </div>   
+      </div>
+      <!--Retailer admin profile div Ends-->
+
+      <!--Navigation menu starts-->
+      <nav class="navigation">
+        <ul class="list-unstyled">
+          <li>
+            <a href="dashboard.html">
+              <i class="fa fa-tachometer"></i>
+              <span class="nav-label">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="alldeals.html">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="nav-label">All Deal</span>
+            </a>
+          </li>
+          <li>
+            <a href="customers.html">
+              <i class="fa fa-user"></i>
+              <span class="nav-label">My Customers</span>
+            </a>
+          </li>
+          <li class="has-submenu active">
+            <a href="settings.html">
+              <i class="fa fa-gears"></i>
+              <span class="nav-label">Settings</span>
+            </a>
+            <!--<ul class="list-unstyled" style="display: block;">
+              <li><a href="#">Change Password</a></li>
+              <li><a href="#">Account Settings</a></li>
+            </ul>-->
+          </li>
+        </ul>
+      </nav>
+      <!--Navigation menu ends-->
+
+    </aside>
+    <!--Side bar section ends-->
+
+    <!--Content section starts-->
+    <section class="content">
+
+      <!--Header starts-->
+      <header class="top-head container-fluid">
+
+        <button type="button" class="navbar-toggle pull-left">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <h4 class="logo pull-left">#Dala</h4>
+
+        <!--<form role="search" class="navbar-left app-search pull-left hidden-xs ng-pristine ng-valid">
+          <input type="text" placeholder="Enter keywords..." class="form-control form-control-circle">
+        </form>
+            
+        <nav class=" navbar-default hidden-xs" role="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        -->
+      </header>
+      <!--Header ends-->
+
+      <!--Content area starts-->
+      <div class="wraper container-fluid">
+
+        <!--<div class="page-header"><h1>Dashboard <small>Let's get a quick overview...</small></h1></div>-->
+
+        <!--<div class="intro-section">
+          <h1>Rewards</h1>
+          <p>Publish customer rewards that best match your marketing goals</p>
+        </div> -->
+
+        <!--Welcome Rewards starts-->
+        <div class="row">
+
+          <div class="reward-card reward clearfix reward-big" name="online">
+            
+            <div class="reward-details col-md-10" style="margin-left: 0%;">
+              <div class="reward-name">
+                <a>Welcome Reward</a>
+              </div>
+              <div class="reward-type"></div>
+
+              <div class="reward-offer">
+                <a style="color:#7C7C7C">This is the first reward you will be offering your new members. Its main purpose is to help you get new members to your loyalty club and give them a warm welcome.</a>
+              </div>
+            </div>
+            
+            <div class="col-md-2">
+              <div class="reward-fav added welcomePublishClick"></div>
+            </div>
+
+            <div class="col-md-12" id="welcomePublish" style="display:none">
+              <form>
+                <div class="form-group">
+                  <input type="text" name="reward" id="reward" placeholder="“A Free Order of French Fries”" class="form-control new-input-field-minimz">
+                </div>
+                <div class="form-group">                
+                  <input class="btn btn-sm signin-button" type="submit" value="Publish" style="height: 40px;font-size: 18px;">
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <!--Welcome Rewards ends-->
+
+        <!--Happy Hour Rewards starts-->
+        <div class="row">
+
+          <div class="reward-card reward clearfix reward-big" name="online">
+            
+            <div class="reward-details col-md-10" style="margin-left: 0%;">
+              <div class="reward-name">
+                <a>Happy Hour Reward</a>
+              </div>
+              <div class="reward-type"></div>
+
+              <div class="reward-offer">
+                <a style="color:#7C7C7C">This reward serves as an incentive to pick things up during typically slow hours. Select your day, hours and reward of choice to draw in more traffic during these times.</a>
+              </div>
+            </div>
+            
+            <div class="col-md-2">
+              <div class="reward-fav added happyHoursPublishClick"></div>
+            </div>
+
+            <div class="col-md-12" id="happyHoursPublish" style="display:none">
+              <form>
+
+                <div class="form-group">
+                  <label>Select your slow hours</label>
+                  <select class="select-dropdown" name="start">
+                    <option value="0000">12am</option>
+                    <option value="0100">01am</option>
+                    <option value="0200">02am</option>
+                    <option value="0300">03am</option>
+                    <option value="0400">04am</option>
+                    <option value="0500">05am</option>
+                    <option value="0600">06am</option>
+                    <option value="0700">07am</option>
+                    <option value="0800">08am</option>
+                    <option value="0900">09am</option>
+                    <option value="1000">10am</option>
+                    <option value="1100">11am</option>
+                    <option value="1200">12pm</option>
+                    <option value="1300">01pm</option>
+                    <option value="1400">02pm</option>
+                    <option value="1500">03pm</option>
+                    <option value="1600">04pm</option>
+                    <option value="1700">05pm</option>
+                    <option value="1800">06pm</option>
+                    <option value="1900">07pm</option>
+                    <option value="2000">08pm</option>
+                    <option value="2100">09pm</option>
+                    <option value="2200">10pm</option>
+                    <option value="2300">11pm</option>
+                  </select>
+
+                  <label>to</label>
+                  <select class="select-dropdown" name="end">
+                    <option value="0100">01am</option>
+                    <option value="0200">02am</option>
+                    <option value="0300">03am</option>
+                    <option value="0400">04am</option>
+                    <option value="0500">05am</option>
+                    <option value="0600">06am</option>
+                    <option value="0700">07am</option>
+                    <option value="0800">08am</option>
+                    <option value="0900">09am</option>
+                    <option value="1000">10am</option>
+                    <option value="1100">11am</option>
+                    <option value="1200">12pm</option>
+                    <option value="1300">01pm</option>
+                    <option value="1400">02pm</option>
+                    <option value="1500">03pm</option>
+                    <option value="1600">04pm</option>
+                    <option value="1700">05pm</option>
+                    <option value="1800">06pm</option>
+                    <option value="1900">07pm</option>
+                    <option value="2000">08pm</option>
+                    <option value="2100">09pm</option>
+                    <option value="2200">10pm</option>
+                    <option value="2300">11pm</option>
+                    <option value="2400">12am</option>
+                  </select>
+
+                </div>
+
+                <div id="slowDays" class="form-group btn-group-sm" data-toggle="buttons">
+                  <label>Select your slow days</label>
+                  <label class="btn btn-default btn-input" style="margin-left: 17px;">
+                    <input type="checkbox" name="slowDays" id="m" value="m"> M
+                  </label>
+                  <label class="btn btn-default btn-input">
+                    <input type="checkbox" name="slowDays" id="t" value="t"> T
+                  </label>
+                  <label class="btn btn-default btn-input">
+                    <input type="checkbox" name="slowDays" id="w" value="w"> W
+                  </label>
+                  <label class="btn btn-default btn-input">
+                    <input type="checkbox" name="slowDays" id="th" value="th"> Th
+                  </label>
+                  <label class="btn btn-default btn-input">
+                    <input type="checkbox" name="slowDays" id="f" value="f"> F
+                  </label>
+                  <label class="btn btn-default btn-input">
+                    <input type="checkbox" name="slowDays" id="sa" value="sa"> Sa
+                  </label>
+                  <label class="btn btn-default btn-input">
+                    <input type="checkbox" name="slowDays" id="su" value="su"> Su
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label>What would you like to offer your customers during Happy Hour?</label>
+                  <input type="text" name="reward" id="reward" placeholder="“A Free Order of French Fries”" class="form-control new-input-field-minimz">
+                </div>
+
+                <div class="form-group">                
+                  <input class="btn btn-sm signin-button" type="submit" value="Publish" style="height: 40px;font-size: 18px;">
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <!--Happy Hour Rewards ends-->
+
+
+
+
+      </div>
+      <!--Content area ends-->
+
+      <!--Footer starts-->
+      <footer class="container-fluid footer">
+        Copyright © 2014 <a href="#" target="_blank">#Dala</a>
+        <a href="#" class="pull-right scrollToTop"><i class="fa fa-chevron-up"></i></a>
+      </footer>
+      <!--Footer ends-->
+
+    </section>
+    <!--Content section ends-->
+
+    
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/jquery.sparkline.min.js"></script>
+    <script src="../js/jquery.sparkline.demo.js"></script>
+
+  </body>
+</html>
